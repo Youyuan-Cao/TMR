@@ -28,16 +28,24 @@
         </div>
       {{/each}}
 
+    <form id="addLocationForm" role="form" method="get" action="/weather">
+      <h3>Add a location</h3>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" placeholder="Name" name="name">
+        </div>
+        <input type="submit" id="submitBtn" class="btn btn-default" value="Add the location"></input>
+    </form>
 
 
     <div class="page" id="page1">
-      <a href="/index">
+      <a href="/">
         <p>Back</p>
       </a>
     </div>
 
 		<div class="page" id="page2">
-      <a href="/index">
+      <a href="/">
         <p>Confirm</p>
       </a>
     </div>

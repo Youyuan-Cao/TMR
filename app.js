@@ -19,6 +19,8 @@ var newEvent = require('./routes/newEvent');
 var login = require('./routes/login');
 var savedSchedule = require('./routes/savedSchedule');
 var alarm = require('./routes/alarm');
+var addLocation = require('./routes/addLocation');
+
 
 
 var app = express();
@@ -54,6 +56,8 @@ app.get('/newEvent', newEvent.view);
 app.get('/', login.view);
 app.get('/savedSchedule', savedSchedule.view);
 app.get('/alarm', alarm.view);
+app.get('/addLocation', addLocation.view);
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
