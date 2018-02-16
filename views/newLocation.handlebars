@@ -9,13 +9,25 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/introHCI.css" rel="stylesheet">
+  <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
-	<div class="container" id="New Event">
-    <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
-    <!-- p means paragraph -->
-    <div class="jumbotron">
+  <div class="jumbotron">
       <h1>Select a location</h1>
     </div>
+
+	<div class="container" id="New Location">
+    <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+    <!-- p means paragraph -->
+
+    {{#each locations}}
+        <div class="location">
+           <label><input type="checkbox" data-toggle="toggle" data-size="small"></label>
+          <h3>{{name}}</h3>
+          <p>{{description}}</p>
+          <hr />
+        </div>
+      {{/each}}
+
 
 
     <div class="page" id="page1">
@@ -33,7 +45,10 @@
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/newEvent.js"></script>
+<script src="js/newLocation.js"></script>
+<script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+
 
 </body>
 </html>

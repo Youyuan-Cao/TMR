@@ -1,0 +1,20 @@
+{
+	"locations": [
+		{
+			"name": "Los Angeles",
+			"description": "Sunny today! Temperature 63"
+		},
+		{
+			"name": "San Francisco",
+			"description": "Rainy from 6-8pm! Temperature 55"
+		},
+		{
+			"name": "New York",
+			"description": "Sunny today! Temperature 56"
+		},
+		{
+			"name": "Seattle",
+			"description": "Rainy all-day! Temperature 43"
+		}
+	]
+}
