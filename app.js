@@ -16,8 +16,8 @@ var affirmation = require('./routes/affirmation');
 var savedRecap = require('./routes/savedRecap');
 var back = require('./routes/back');
 var newEvent = require('./routes/newEvent');
-
-var newLocation = require('./routes/newLocation');
+var login = require('./routes/login');
+var savedSchedule = require('./routes/savedSchedule');
 var alarm = require('./routes/alarm');
 
 
@@ -43,20 +43,17 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', index.view);
+app.get('/index', index.view);
 // Example route
-// app.get('/page/:name', index.view);
-app.get('/weather', weather.view);
 app.get('/schedule', schedule.view);
+app.get('/weather', weather.view);
 app.get('/affirmation', affirmation.view);
 app.get('/savedRecap', savedRecap.view);
 app.get('/back', back.view);
 app.get('/newEvent', newEvent.view);
-
-app.get('/newLocation', newLocation.view);
-
+app.get('/', login.view);
+app.get('/savedSchedule', savedSchedule.view);
 app.get('/alarm', alarm.view);
-
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

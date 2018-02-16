@@ -14,21 +14,31 @@
     <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
     <!-- p means paragraph -->
     <div class="jumbotron">
-      <h1>Add new event</h1>
+      <h1>Add New Event</h1>
     </div>
 
 
-    <div class="page" id="page1">
-      <a href="/">
-        <p>Back</p>
-      </a>
-    </div>
+
+		<form action="/action_page.php">
+		Type in time (00:00 PM/AM): <input type="text" name="Time" value=""><br>
+		Type in location: <input type="text" name="Location" value=""><br>
+		Type in event: <input type="text" name="Event" value=""><br>
+
+		</form>
 
 		<div class="page" id="page2">
-      <a href="/">
-        <p>Confirm</p>
+			<a href="/schedule">
+				<p align = "center">Confirm</p>
+			</a>
+		</div>
+
+    <div class="page" id="page1">
+      <a href="/schedule">
+        <p align = "center">Back</p>
       </a>
     </div>
+
+
 
 
 <script src="https://code.jquery.com/jquery.js"></script>
