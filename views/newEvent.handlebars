@@ -6,9 +6,9 @@
 
 </head>
 <body>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="css/introHCI.css" rel="stylesheet">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/introHCI.css" rel="stylesheet">
 
 	<div class="container" id="New Event">
     <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
@@ -17,17 +17,23 @@
       <h1>Add New Event</h1>
     </div>
 
+    <form id="addEventForm" role="form" method="get" action="/addto">
+      <h3>Add an event</h3>
+        <div class="form-group">
+          <label for="name">Event Name:</label>
+          <input type="text" class="form-control" id="name" placeholder="Name" name="name">
 
+          <label for="time">Time:</label>
+          <input type="text" class="form-control" id="time" placeholder="Time" name="time">
 
-		<form action="/action_page.php">
-		Type in time (00:00 PM/AM): <input type="text" name="Time" value=""><br>
-		Type in location: <input type="text" name="Location" value=""><br>
-		Type in event: <input type="text" name="Event" value=""><br>
-
-		</form>
+          <label for="location">Location:</label>
+          <input type="text" class="form-control" id="location" placeholder="Location" name="location">
+        </div>
+        <input type="submit" id="submitBtn" class="btn btn-default" value="Add the event"></input>
+    </form>
 
 		<div class="page" id="page2">
-			<a href="/schedule">
+			<a href="/index">
 				<p align = "center">Confirm</p>
 			</a>
 		</div>
@@ -42,8 +48,8 @@
 
 
 <script src="https://code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/newEvent.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/newEvent.js"></script>
 
 </body>
 </html>

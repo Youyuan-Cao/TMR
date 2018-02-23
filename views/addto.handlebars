@@ -80,16 +80,6 @@
       </div>
     </div>
 
-    {{#each locations}}
-        <div class="events">
-          <h3>{{name}}</h3>
-          <p>{{time}}</p>
-          <p>{{location}}</p>
-        
-          <hr />
-        </div>
-      {{/each}}
-
     <script>
     /* When the user clicks on the button,
     toggle between hiding and showing the dropdown content */
@@ -123,19 +113,33 @@
 -->
 
 
+      {{#each events}}
+        <div class="events">
+          <h3>{{name}}</h3>
+          <p>{{time}}</p>
+          <p>{{location}}</p>
+        
+          <hr />
+        </div>
+      {{/each}}
+
 <br></br>
 <div>
       <a>
+<form id="addEventForm" role="form" method="get" action="/addto">
+      <h3>Add an event</h3>
+        <div class="form-group">
+          <label for="name">Event Name:</label>
+          <input type="text" class="form-control" id="name" placeholder="Name" name="name">
 
+          <label for="time">Time:</label>
+          <input type="text" class="form-control" id="time" placeholder="Time" name="time">
 
-      
-    <div class ="page" >
-      <a href="newEvent" class="thumbnail">
-        <p>Add an event...</p>
-      </a>
-    </div>
-
-
+          <label for="location">Location:</label>
+          <input type="text" class="form-control" id="location" placeholder="Location" name="location">
+        </div>
+        <input type="submit" id="submitBtn" class="btn btn-default" value="Add the event"></input>
+    </form>
 
     <a>
      <div class="page" id="page1">
@@ -156,7 +160,7 @@
 
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/schedule.js"></script>
+  <script src="/js/addto.js"></script>
 
 </body>
 </html>

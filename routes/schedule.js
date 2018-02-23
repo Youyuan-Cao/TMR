@@ -2,11 +2,13 @@
 /*
  * GET home page.
  */
+var data = require('../data_event.json');
 
 exports.view = function(req, res){
-  res.render('schedule', {
-  	'schedule': '' 
-	 });
+	console.log(data);
+  res.render('schedule', data);
   
   	
 };
+
+

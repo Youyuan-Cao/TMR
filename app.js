@@ -20,7 +20,8 @@ var login = require('./routes/login');
 var savedSchedule = require('./routes/savedSchedule');
 var alarm = require('./routes/alarm');
 var newLocation = require('./routes/newLocation');
-
+var add = require('./routes/add');
+var addto = require('./routes/addto');
 
 
 var app = express();
@@ -57,6 +58,8 @@ app.get('/', login.view);
 app.get('/savedSchedule', savedSchedule.view);
 app.get('/alarm', alarm.view);
 app.get('/newLocation', newLocation.view);
+app.get('/add', add.addLocation);
+app.get('/addto', addto.addEvent);
 
 
 http.createServer(app).listen(app.get('port'), function(){
