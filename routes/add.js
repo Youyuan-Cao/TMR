@@ -8,9 +8,9 @@ exports.addLocation = function(req, res){
 	var newLocation = {
 		"name": req.query.name,
 	};
-	var weather = {
-		"name": req.query.name,
-	}; 
+	//var weather = {
+	//	"name": req.query.name,
+	//}; 
 
 	data.locations.push(newLocation);
 	res.render('add', data);

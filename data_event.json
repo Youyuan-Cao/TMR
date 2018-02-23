@@ -1,14 +1,9 @@
 {
 	"events": [
 		{
-			"name": "Lunch with Professor Hoffman",
-			"time": "12 p.m.",
-			"location": "Round Table"
-		},
-		{
-			"name": "CSE midterm",
-			"time": "6 p.m.",
-			"location": "Peterson Hall"
+			"name": "",
+			"time": "",
+			"location": ""
 		}
 	]
 }
