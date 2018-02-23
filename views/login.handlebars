@@ -14,12 +14,27 @@
 
     <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
     <!-- p means paragraph -->
-    <div class="jumbotron">
+		<div class="jumbotron">
       <h2>____Welcome to____</h2>
 			<h1>MORNING RECAP</h1>
     </div>
 
+		<p class="facebookLogin">
+		                Please login through Facebook <br></br>
+		            <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+							</fb:login-button>
+							<a href="/index">
+		            </p>
+				</div>
+				<div class="jumbotron">
+            <div class = fbName>
 
+            </div>
+
+
+		</div>
+
+<!--
   	   <div class="container">
 	     <label for="uname"><b>Username</b></label>
 	     <input type="text" placeholder="Enter Username" name="uname" required>
@@ -33,12 +48,15 @@
 		<p style="text-align:center">Log In</p>
 	</a>
 </div>
-
+-->
 
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/login.js"></script>
+
+{{> facebook}}
+        <script src="/js/facebook.js"></script>
 
 </body>
 </html>
