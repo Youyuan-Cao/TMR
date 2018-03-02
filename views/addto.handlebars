@@ -115,6 +115,8 @@
         }
       }
     }
+
+
     </script>
 
 
@@ -129,10 +131,9 @@
 
       {{#each events}}
         <div class="events">
-          <h3>{{name}}</h3>
-          <p>{{time}}</p>
-          <p>{{location}}</p>
-
+            <h3>{{name}}</h3>
+            <p>{{time}}</p>
+            <p>{{location}}</p>
           <hr />
         </div>
       {{/each}}
@@ -153,11 +154,14 @@
           <input type="text" class="form-control" id="location" placeholder="Location" name="location">
         </div>
         <input type="submit" id="submitBtn" class="btn btn-default" value="Add the event"></input>
+     
+    
     </form>
 
 
 
   </div>
+
 
 
   <script src="https://code.jquery.com/jquery.js"></script>

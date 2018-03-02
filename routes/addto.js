@@ -1,4 +1,5 @@
 
+
 /*
  * GET home page.
  */
@@ -18,3 +19,4 @@ exports.addEvent = function(req, res){
 	res.render('addto', data);
 
 }
+
