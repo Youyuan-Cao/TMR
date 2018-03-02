@@ -3,7 +3,6 @@
 	<title>Skeleton Main Page</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 </head>
 <body>
 
@@ -11,32 +10,32 @@
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/introHCI.css" rel="stylesheet">
   <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
-	<div class="container" id="weather">
 
-    <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
-    <!-- p means paragraph -->
     <div class="jumbotron">
       <h1>Weather</h1>
     </div>
 
-    <div class="checkbox">
+   <div class="container" id="New Location">
+    {{#each locations}}
+        <div class="location"><label><input type="checkbox" data-toggle="toggle" data-size="medium"></label>
+          <h3>{{name}}</h3>
+          <p>{{description}}</p>
+      {{/each}}
 
+  <div class="container" id="New Location">
 
-      <label>
-       <input type="checkbox" data-toggle="toggle" data-size="large">
-        Current Location:
-        La Jolla
-      </label>
+    <form id="addLocationForm" role="form" method="get" action="/weather">
+      <h3>Add a location</h3>
+        <div class="form-group">
+          <label for="name">Location:</label>
+          <input type="text" class="form-control" id="name" placeholder="Location" name="name">
+        </div>
+        <input type="submit" id="submitBtn" class="btn btn-default" value="Add the location"></input>
+    </form>
+    
 
-<br></br>
      <div>
       <a>
-
-      <div class ="page1" >
-        <a href="newLocation" class="thumbnail">
-          <p>Select a location</p>
-        </a>
-      </div>
 
       <div class="page2" id="page2">
        <a href="/index">
@@ -45,21 +44,20 @@
        </div>
 
     <a>
-<div class="page2" >
+      <div class="page2" >
        <a href="/index">
-    <p align = "center">Back</p>
+         <p align = "center">Back</p>
                  </a>
              </div>
+         
 
  </div>
-
 
 
 
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="/js/bootstrap.min.js"></script>
-<script src="/js/weather.js"></script>
 <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
 </body>

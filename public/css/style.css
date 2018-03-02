@@ -3,11 +3,11 @@
 --------------------------*/
 
 
-*{
+/**{
 	margin:0;
 	padding:0;
 }
-
+*/
 
 /*-------------------------
 	General Styles
@@ -45,9 +45,9 @@ section, footer, header, aside{
 
 
 #clock{
-	width:370px;
-	padding:40px;
-	margin:200px auto 60px;
+	width:320px;
+	padding:20px;
+	margin:70px auto 60px;
 	position:relative;
 }
 

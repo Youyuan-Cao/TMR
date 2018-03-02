@@ -72,26 +72,15 @@
 
     .show {display:block;}
     </style>
-    </head>
-    <body>
+    
+    
 
     <div class="dropdown">
     <button onclick="myFunction()" class="dropbtn" align=center>Saved Schedules</button>
       <div id="myDropdown" class="dropdown-content">
-        <a href="savedSchedule">Monday-Wednesday-Friday</a>
-        <a href="savedSchedule">Tuesday-Thursday</a>
+        <a href="savedSchedule">Class Schedule</a>
       </div>
     </div>
-
-    {{#each locations}}
-        <div class="events">
-          <h3>{{name}}</h3>
-          <p>{{time}}</p>
-          <p>{{location}}</p>
-
-          <hr />
-        </div>
-      {{/each}}
 
     <script>
     /* When the user clicks on the button,
@@ -116,29 +105,34 @@
     }
     </script>
 
+<div class="container" id="New Event">
 
+    {{#each events}}
+        <div class="event">
+          <h3>{{name}}</h3>
+          <p>{{time}}</p>
+          <p>{{location}}</p> 
 
-<!--
-    <div class="page" >
-      <a href="schedule.html" class="thumbnail">
-        <p>Use Saved Schedule</p>
+        </div>
+      {{/each}}
+  
+    <form id="addEventForm" role="form" method="get" action="/schedule">
+      <h3>Add an event</h3>
+        <div class="form-group">
+          <label for="name">Event Name:</label>
+          <input type="text" class="form-control" id="name" placeholder="Name" name="name" required>
 
--->
+          <label for="time">Time:</label>
+          <input type="text" class="form-control" id="time" placeholder="Time" name="time" required>
 
+          <label for="location">Location:</label>
+          <input type="text" class="form-control" id="location" placeholder="Location" name="location" required>
+        </div>
+      <input type="submit" id="submitBtn" class="btn btn-default" value="Add the event"></input>
+    </form>
+  
 
-<br></br>
-<div>
-      <a>
-
-
-
-    <div class ="page" >
-      <a href="newEvent" class="thumbnail">
-        <p>Add an event...</p>
-      </a>
-    </div>
-
-    <a>
+    
      <div class="page" id="page1">
       <a href="/index">
         <p align=center>Confirm</p>
@@ -150,17 +144,13 @@
       </a>
     </div>
     
+    </div>
 
-
-
-
-
-  </div>
 
 
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/schedule.js"></script>
+  <!-- /<script src="/js/schedule.js"></script> -->
 
 </body>
 </html>

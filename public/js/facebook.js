@@ -1,5 +1,3 @@
-var data = require("../name.json");
-
 function checkLoginState() {
   FB.getLoginStatus(function(response) {
     statusChangeCallback(response);
@@ -41,8 +39,8 @@ function goToHome() {
 
 
 function saveName() {
-  var name = response.name;
-  name.push(name);
+  // var name = response.name;
+  // name.push(name);
 }
 
 

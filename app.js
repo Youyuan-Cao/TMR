@@ -16,13 +16,10 @@ var weather = require('./routes/weather');
 var affirmation = require('./routes/affirmation');
 var savedRecap = require('./routes/savedRecap');
 var back = require('./routes/back');
-var newEvent = require('./routes/newEvent');
 var login = require('./routes/login');
 var savedSchedule = require('./routes/savedSchedule');
 var alarm = require('./routes/alarm');
-var newLocation = require('./routes/newLocation');
-var add = require('./routes/add');
-var addto = require('./routes/addto');
+
 
 
 var app = express();
@@ -51,17 +48,13 @@ app.get('/index', index.view);
 app.get('/addName', addName.addName);
 // Example route
 app.get('/schedule', schedule.view);
-app.get('/weather', weather.view);
+app.get('/weather', weather.addLocation);
 app.get('/affirmation', affirmation.view);
 app.get('/savedRecap', savedRecap.view);
 app.get('/back', back.view);
-app.get('/newEvent', newEvent.view);
 app.get('/', login.view);
 app.get('/savedSchedule', savedSchedule.view);
 app.get('/alarm', alarm.view);
-app.get('/newLocation', newLocation.view);
-app.get('/add', add.addLocation);
-app.get('/addto', addto.addEvent);
 
 
 http.createServer(app).listen(app.get('port'), function(){
