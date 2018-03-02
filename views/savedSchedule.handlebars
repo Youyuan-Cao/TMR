@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>Skeleton Schedule Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="css/introHCI.css" rel="stylesheet">
+
+
+ <div class="jumbotron">
+		<h1>Saved Schedule</h1>
+    </div>
+
+
+   	<div class="container" id="Saved Recap">
+
+    {{#each schedules}}
+        <div class="schedule" id="{{id}}">
+          <h3>{{name}}</h3>
+          <p>{{time}}</p>
+          <p>{{location}}</p>
+          <hr />
+        </div>
+    {{/each}}
+
+		<style>
+     #button1{
+     width: 49%;
+     height: 40px;
+     color: blue;
+
+
+     }
+     #button2{
+     width: 49%;
+     height: 40px;
+     color: blue;
+
+
+
+     }
+
+
+     </style>
+     <a href="/index">
+     <button type="button home-button" id="button1">Back</button></a>
+     <a href="/index">
+     <button type="button contact-button" id="button2">Confirm</button></a>
+
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

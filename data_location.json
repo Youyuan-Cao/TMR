@@ -1,0 +1,13 @@
+{
+	"locations": [
+		{
+			"name": "Current Location: La Jolla, CA",
+			"description": "Sunny today! The average temperature will be 63."
+		},
+		{
+			"name": "Los Angeles, CA",
+			"description": "Sunny today! The average temperature will be 63."
+		}
+
+	]
+}
