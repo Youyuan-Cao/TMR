@@ -12,38 +12,22 @@
 
 </head>
 <body>
+
+			<dialog id="window">
+			<h4>Customize how you are awoken!</h4>
+			<h6>On this page input the data that you want read outloud to you after your alarm goes off in the morning!</h6>
+			<button id="exit">Close Dialog</button>
+
+			</dialog>
+			<button id="show">Help</button>
 	<div class="container">
     <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
     <!-- p means paragraph -->
 
 
-<br></br>
 
     <div class="jumbotron">
-			<style>
-					#button1{
-					width: 30%;
-					height: 40px;
-					color: red;
 
-
-					}
-					#button2{
-					width: 30%;
-					height: 40px;
-					color: blue;
-
-
-
-					}
-
-					</style>
-					<a href="/">
-					<button type="button home-button" id="button1" >Log Out</button></a>
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="/alarm">
-					<button type="button contact-button" id="button2">Alarm</button></a>
       <h1 align=center>Good Evening!</h1>
 
 
@@ -67,39 +51,44 @@
 	</div>
   {{/each}}
    -->
-	 <div class="page" id="page1">
-	 		<a href="savedRecap" class="thumbnail">
-	 			<p align=center>Saved Recaps</p>
-	 		</a>
-	 	</div>
 
-  <div class="page" id="page2">
+  <div class="page" id="page1">
       <a href="schedule" class="thumbnail">
         <p align=center>Schedule</p>
       </a>
     </div>
 
-    <div class="page" id="page3">
+    <div class="page" id="page2">
       <a href="weather" class="thumbnail">
         <p align=center>Weather</p>
       </a>
     </div>
 
-    <div class="page" id="page4">
+    <div class="page" id="page3">
       <a href="affirmation" class="thumbnail">
         <p align=center>Affirmation</p>
       </a>
     </div>
 
+		<div class="page" id="page4">
+	 		<a href="savedRecap" class="thumbnail">
+	 			<p align=center>Saved Recaps</p>
+	 		</a>
+	 	</div>
+
+		<div class="page" id="page5">
+	 		<a href="alarm" class="thumbnail">
+	 			<p align=center>Alarm</p>
+	 		</a>
+	 	</div>
+
+		<div class="page" id="page6">
+	 		<a href="/" class="thumbnail">
+	 			<p align=center><font color="red">Log Out</p>
+	 		</a>
+	 	</div>
 
 
-		<dialog id="window">
-		<h4>Customize how you are awoken!</h4>
-		<h6>On this page input the data that you want read outloud to you after your alarm goes off in the morning!</h6>
-		<button id="exit">Close Dialog</button>
-
-		</dialog>
-		<button id="show">Help</button>
 
 
 
