@@ -19,7 +19,7 @@ var back = require('./routes/back');
 var login = require('./routes/login');
 var savedSchedule = require('./routes/savedSchedule');
 var alarm = require('./routes/alarm');
-
+var indexB = require('./routes/indexB');
 
 
 var app = express();
@@ -45,6 +45,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/index', index.view);
+app.get("/viewAlt",index.view)
 app.get('/addName', addName.addName);
 // Example route
 app.get('/schedule', schedule.view);
@@ -55,6 +56,7 @@ app.get('/back', back.view);
 app.get('/', login.view);
 app.get('/savedSchedule', savedSchedule.view);
 app.get('/alarm', alarm.view);
+app.get('/indexB', indexB.view);
 
 
 http.createServer(app).listen(app.get('port'), function(){
