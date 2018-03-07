@@ -130,12 +130,15 @@
 <div class="container" id="New Event">
 
     {{#each events}}
-        <div class="event">
+        <div class="event" id="section-{{name}}">
           <h3>{{name}}</h3>
           <p>{{time}}</p>
           <p>{{location}}</p>
 
         </div>
+        <button type="page" id="page-{{name}}" onclick="$('#section-{{name}}').hide()">Delete</button></a>
+
+
       {{/each}}
 
     <form id="addEventForm" role="form" method="get" action="/schedule">
