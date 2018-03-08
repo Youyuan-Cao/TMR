@@ -1,12 +1,8 @@
 {
 	"locations": [
 		{
-			"name": "Los Angeles, CA",
-			"description": "Sunny today! The average temperature will be 63."
-		},
-		{
-			"name": "San Fransisco, CA",
-			"description": "Wear a coat! The average temperature today will be 50 degrees."
+			"name": "",
+			"description": ""
 		}
 
 	]
