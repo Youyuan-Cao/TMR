@@ -1,0 +1,324 @@
+body {
+  background: #313248;
+  min-height: 2000px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.h1 {
+  text-align: center;
+  font-size: 50px;
+  margin: 0 0 1px 0;
+}
+
+.mediumstart {
+  width: 50vw;
+  margin: 0 auto;
+  display: table;
+}
+
+h2 {
+  font-size: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0 10px 0;
+}
+
+h1,
+h2,
+.footer {
+  color: white;
+  font-weight: normal;
+  font-family: "Share Tech Mono", sans-serif;
+}
+
+.img {
+  position: relative;
+  height: 300px;
+}
+
+svg {
+  overflow: hidden;
+  width: 800px;
+  margin-top: -55px;
+}
+
+svg.one {
+  margin-left: -12px;
+}
+svg.two {
+  margin-left: -283px;
+}
+svg.three {
+  margin-top: 0;
+  margin-left: -479px;
+}
+
+.paths {
+  opacity: 0;
+}
+
+.cls-1,
+.cls-10,
+.cls-11,
+.cls-12,
+.cls-13,
+.cls-14,
+.cls-15,
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-7,
+.cls-8,
+.cls-9 {
+  fill: none;
+}
+
+.cls-2 {
+  fill: url(#radial-gradient);
+}
+
+.cls-4 {
+  stroke: #011eff;
+  stroke-width: 0.25px;
+}
+
+.cls-10,
+.cls-11,
+.cls-12,
+.cls-13,
+.cls-14,
+.cls-15,
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-7,
+.cls-8,
+.cls-9 {
+  stroke-miterlimit: 10;
+}
+
+.cls-5 {
+  stroke: #181bf5;
+  stroke-width: 0.27px;
+}
+
+.cls-6 {
+  stroke: #2f19ea;
+  stroke-width: 0.3px;
+}
+
+.cls-7 {
+  stroke: #4616e0;
+  stroke-width: 0.32px;
+}
+
+.cls-8 {
+  stroke: #5d13d6;
+  stroke-width: 0.34px;
+}
+
+.cls-9 {
+  stroke: #7410cb;
+  stroke-width: 0.36px;
+}
+
+.cls-10 {
+  stroke: #8c0ec1;
+  stroke-width: 0.39px;
+}
+
+.cls-11 {
+  stroke: #a30bb6;
+  stroke-width: 0.41px;
+}
+
+.cls-12 {
+  stroke: #ba08ac;
+  stroke-width: 0.43px;
+}
+
+.cls-13 {
+  stroke: #d105a2;
+  stroke-width: 0.45px;
+}
+
+.cls-14 {
+  stroke: #e80397;
+  stroke-width: 0.48px;
+}
+
+.cls-15 {
+  stroke: #ff008d;
+  stroke-width: 0.5px;
+}
+
+main {
+  padding: 10vw;
+}
+
+//this is from Rachel Andrew Grid by Example Media Object Pattenr
+//https://codepen.io/rachelandrew/pen/zwMZVy
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.media {
+  margin-bottom: 2em;
+  padding: 40px 10px;
+}
+
+.media > .title {
+  grid-area: title;
+}
+.media > .img {
+  grid-area: img;
+}
+.media > .content {
+  grid-area: bd;
+}
+.media > .footer {
+  grid-area: ft;
+}
+
+.media {
+  display: grid;
+  grid-column-gap: 40px;
+  grid-template-areas:
+    "title"
+    "img"
+    "bd"
+    "ft";
+}
+
+@media (min-width: 600px) {
+  /* clearfix*/
+  .media:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .media > .media {
+    margin-left: 260px;
+    clear: both;
+  }
+
+  .media .img {
+    float: left;
+    margin: 0 10px 0 0;
+    width: 250px;
+  }
+
+  .media .footer {
+    padding: 10px;
+    background: #505280;
+  }
+
+  .media.media-flip .img {
+    float: right;
+    margin: 0 0 0 10px;
+  }
+
+  .media > * {
+    margin: 0 0 0 160px;
+  }
+
+  .media.media-flip > * {
+    margin: 0 160px 0 0;
+  }
+
+  @supports (display: grid) {
+    /* override */
+    .media > *,
+    .media.media-flip > * {
+      margin: 0;
+    }
+    .media .img,
+    .media.media-flip .img {
+      width: auto;
+      margin: 0;
+    }
+    .media:after {
+      content: none;
+    }
+
+    .media {
+      display: grid;
+      grid-column-gap: 40px;
+      grid-template-columns: 250px 3fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+        "img title"
+        "img bd"
+        "ft ft";
+    }
+
+    .media.media-flip {
+      grid-template-columns: 3fr 250px;
+      grid-template-areas:
+        "title img"
+        "bd img"
+        "ft ft";
+    }
+
+    .media.img-flexie {
+      grid-template-columns: minmax(250px, 1fr) 3fr;
+    }
+
+    .media.media-flip.img-flexie {
+      grid-template-columns: 3fr minmax(250px, 1fr);
+    }
+
+    /* nested */
+    .media > .media {
+      grid-column: 2 / -1;
+      margin: 0; /* override */
+      margin-top: 1em;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  // layout
+
+  body {
+    line-height: 1.2;
+  }
+
+  main {
+    padding: 5vw;
+  }
+
+  .mediumstart {
+    width: 80%;
+  }
+
+  .media {
+    padding: 0;
+  }
+
+  .img {
+    height: 150px;
+  }
+
+  svg {
+    width: 400px;
+  }
+
+  svg.two {
+    margin-left: -140px;
+  }
+
+  svg.three {
+    margin-top: -21px;
+    margin-left: -243px;
+  }
+}

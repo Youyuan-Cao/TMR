@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento|Playfair+Display:900|Roboto:900|Space+Mono');
+
+$cursive: 'Sacramento', cursive;
+
+h3 {
+  font-family: $cursive;
+  font-size: 2em;
+  font-weight: 200;
+  margin-left: 30%;
+  letter-spacing: 1px;
+  margin-right: 30%;
+}
