@@ -8,7 +8,7 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 
-var index = require('./routes/index');
+var index = require('./routes/indexB');
 var addName = require('./routes/addName');
 // Example route
 var schedule = require('./routes/schedule');
@@ -44,7 +44,7 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/index', index.view);
+app.get('/index', indexB.view);
 app.get("/viewAlt",index.view)
 app.get('/addName', addName.addName);
 // Example route
