@@ -9,7 +9,7 @@
 	<link href="/css/bootstrap.min.css" rel="stylesheet">
 	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="/css/newWeatherCss.css" rel="stylesheet">
-	<link href="/css/introHCI.css" rel="stylesheet">
+	<!--<link href="/css/introHCI.css" rel="stylesheet">-->
   <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 
     <div class="jumbotron">
@@ -40,25 +40,27 @@
 				<br></br>
 
    <div class="container" id="checkbox-container">
-		 <div class="location"><label><input type="checkbox" data-toggle="toggle" data-size="medium" id="option1"></label>
-			 <h3>Current Location: La Jolla</h3>
-			 <p>Sunny today! The average temperature today will be 72 degrees.</p>
 
-			 <div class="location"><label><input type="checkbox" data-toggle="toggle" data-size="medium" id="option2"></label>
+			 <h3><b>Current Location:</b> La Jolla</h3>
+			 <p>Sunny today! The average temperature today will be 72 degrees.</p>
+<div class="location"><label><input type="checkbox" data-toggle="toggle" data-size="medium" id="option1"></label>
+
 				 <h3>Los Angeles,CA </h3>
 				 <p>Sunny today! The average temperature will be 78 degrees.</p>
+<div class="location"><label><input type="checkbox" data-toggle="toggle" data-size="medium" id="option2"></label>
 
-				 <div class="location"><label><input type="checkbox" data-toggle="toggle" data-size="medium" id="option3"></label>
 					 <h3>San Fransisco, CA</h3>
 					 <p>Wear a coat! The average temperature today will be 50 degrees.</p>
-
-
+<div class="location"><label><input type="checkbox" data-toggle="toggle" data-size="medium" id="option3"></label>
+<hr>
 					 {{#each locations}}
-				 			<div class="location"><label><input type="checkbox" data-toggle="toggle" data-size="medium" ></label>
+
 				 				<h3>{{name}}</h3>
 				 				<p>{{description}}</p>
 				 		{{/each}}
 
+
+  <div class="location"><label><input type="checkbox" data-toggle="toggle" data-size="medium" id="option4"></label>
 
 		<div class="container" id="New Location">
 
