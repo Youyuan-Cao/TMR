@@ -8,7 +8,7 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars')
 
-var index = require('./routes/indexB');
+var index = require('./routes/index');
 var addName = require('./routes/addName');
 // Example route
 var schedule = require('./routes/schedule');
@@ -56,7 +56,7 @@ app.get('/back', back.view);
 app.get('/', login.view);
 app.get('/savedSchedule', savedSchedule.view);
 app.get('/alarm', alarm.view);
-app.get('/indexB', indexB.view);
+app.get('/indexA', index.view);
 
 
 http.createServer(app).listen(app.get('port'), function(){
