@@ -7,6 +7,7 @@
   <!-- Bootstrap -->
   <link href="/css/bootstrap.min.css" rel="stylesheet">
   <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery.js"></script>
   <!--<link href="/css/introHCI.css" rel="stylesheet">-->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -120,21 +121,48 @@
         }
       }
     }
+
+    function deleteCurrentEvent(eventName){
+      $('#section-display-'+eventName).hide();
+      var allEvents = localStorage.getItem("deletedEvents");
+      if (allEvents == null) {
+        allEvents = "";
+      } else {
+        allEvents = allEvents + "$" + eventName;
+      }
+
+      localStorage.setItem("deletedEvents", allEvents);
+    }
+
+
+    $( document ).ready(function() {
+      console.log("page ready");
+      deletedEvent = localStorage.getItem("deletedEvents");
+      deletedEventArray = deletedEvent.split("$");
+
+      var i;
+      for (i = 0; i < deletedEventArray.length; i++) {
+          $('#section-display-'+deletedEventArray[i]).hide();
+
+      }
+  // Handler for .ready() called.
+    });
     </script>
 
 <div class="container" id="New Event">
 
     {{#each events}}
+      <div id="section-display-{{name}}">
         <div class="event" id="section-{{name}}">
           <h3>{{name}}</h3>
           <p>{{time}}</p>
           <p>{{location}}</p>
 
         </div>
-        <button type="page" id="page-{{name}}" onclick="$('#section-{{name}}').hide()">Delete</button>
-
-
+        <button type="page" id="page-{{name}}" onclick="deleteCurrentEvent('{{name}}')">Delete</button>
+      </div>
       {{/each}}
+
 
     <form id="addEventForm" role="form" method="get" action="/schedule">
       <h3>Add an event</h3>
@@ -159,7 +187,7 @@
 
 
 
-  <script src="https://code.jquery.com/jquery.js"></script>
+
   <script src="/js/bootstrap.min.js"></script>
   <!-- /<script src="/js/schedule.js"></script> -->
 
